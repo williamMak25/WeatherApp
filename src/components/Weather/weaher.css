@@ -1,0 +1,56 @@
+.background{
+    display: grid;
+    grid-template: 'humidity humidity humidity temperature'
+                    'region cloud wind pressure'
+                    
+                    ;
+    column-gap: 2px;
+    row-gap: 5px
+    ;
+}
+i{
+    width: 100px;
+    height: 100px;
+}
+.box{
+    background-color:#4FB1B1;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.one{
+    grid-area: humidity;
+
+}
+.two{
+    grid-area: pressure;
+}
+.three{
+    grid-area:temperature ;
+    background-image: linear-gradient(to top, #cc6056 0%, #cc8b8b 100%);
+}
+.four{
+    grid-area: cloud;
+}
+.five{
+    grid-area: wind;
+    background-color: #c2c4c3;
+    background-image: linear-gradient(135deg, #c2c4c3 0%, #e2d1c3 100%);
+}
+.six{
+    grid-area: region;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: linear-gradient(to top, #7d44d0 0%, #330867 100%);
+
+}
+
+.pht{
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    opacity: 0.9;
+}

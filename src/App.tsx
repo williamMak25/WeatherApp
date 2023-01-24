@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { AuthUser } from './components/AuthUser';
+import { Greet } from './components/Greet';
+import { Heading } from './components/Heading';
+import { Status } from './components/Status';
+import { LocationProvider } from './components/Weather/Location';
+import { WeatherInterFace } from './components/Weather/Weather';
 
 function App() {
+  const [userName,setUserName] = useState('Wai Yan Win Lwin')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <LocationProvider>
+      <WeatherInterFace/>
+    </LocationProvider>
     </div>
   );
 }
